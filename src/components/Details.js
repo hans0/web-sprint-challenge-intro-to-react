@@ -6,26 +6,12 @@ import './Character.css';
 
 export default function Details(props) {
   // const [homeworld, setHomeworld] = useState('Tatooine');
-  const { character, number } = props;
-
-
-  const [homeworld, setHomeworld] = useState(null);
-  useEffect(() => {
-    axios.get(`${character.homeworld}`)
-      .then((res) => {
-        console.log(res.data);
-        setHomeworld(res.data);
-      })
-      .catch((err) => {
-        console.log(`HOMEWORLD ERROR: ${err}`);
-      });
-  }, [character]);
-
+  const { character, homeworld, number } = props;
 
   return (
     <div className='details'>
+      <p>Born: {character.birth_year}</p>
       <p>Homeworld: {homeworld ? homeworld.name : 'Loading...'}</p>
-
     </div>
   )
 }
