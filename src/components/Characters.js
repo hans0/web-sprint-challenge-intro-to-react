@@ -20,16 +20,15 @@ export default function Characters() {
   , [])
   let characterNumbers = [];
   if (characterLinksEpisodeV) {
+    /* grabs the number at the end with a regex, regex is not original */
     characterLinksEpisodeV.forEach(char => characterNumbers.push(/[^/]*$/.exec(char.substring(0, char.length-1))[0]))
   } 
 
   return (
     <div className="characters">
-      {/* {characterLinksEpisodeV.map((cl) =>  <Character key={10} characterLink={cl} />
-      )} */}
       {characterNumbers.map(c => 
         <Character key={c} number={c} />)}
-      {/* <Character key={10} number={10} /> */}
+      
     </div>
   );
 

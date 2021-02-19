@@ -1,0 +1,33 @@
+
+.character {
+  width: 700px;
+  margin: 0 auto;
+
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 700px; */
+  /* margin: 0 auto; */
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  padding: 5px 5px;
+
+  border: 1px solid #39FF14;
+}
+@media screen and (max-width: 500px) {
+  .character {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.details {
+  background-color: white;
+  margin: auto auto;
+
+  border: 1px solid #39FF14;
+
+}
